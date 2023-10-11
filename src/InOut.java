@@ -298,23 +298,7 @@ public class InOut {
 	
 	
 	public static void main(String [] args){
-//		Criando Entidades: Ator
-		Ator ator1 = new Ator("Andy Irons", "Surfista");
-		Ator ator2 = new Ator("Gabriel Medina", "Surfista");
-		Ator ator3 = new Ator("Kelly Slater", "Surfista");
-		Ator ator4 = new Ator("Rob Machado", "Surfista");
-		
-		Filme filme1 = new Filme("De volta para o Futuro", "Comédia", 1234567890L);
-		
-		filme1.adicionarAtor(ator1);
-		filme1.adicionarAtor(ator2);
-		filme1.adicionarAtor(ator3);
-		filme1.adicionarAtor(ator4);
-		
-		filme1.getElenco();
-		
-		
-		
+				
 	}
 
     
