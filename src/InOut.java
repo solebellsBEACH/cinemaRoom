@@ -297,9 +297,16 @@ public class InOut {
 	
 	
 	public static void main(String [] args){
-		Ator ator1 = new Ator("Lucas Xavier", "Surfista");
+//		Criando Entidades: Ator
+		Ator ator1 = new Ator("Andy Irons", "Surfista");
+		Ator ator2 = new Ator("Gabriel Medina", "Surfista");
+		Ator ator3 = new Ator("Kelly Slater", "Surfista");
+		Ator ator4 = new Ator("Rob Machado", "Surfista");
 		
-		System.out.println(ator1.getActorDescription());
+		
+		
+		
+		
 	}
 
     
