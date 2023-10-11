@@ -37,6 +37,14 @@ public class Ator {
 	public void setFilmes(Set<Filme> filmes) {
 		this.filmes = filmes;
 	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getPapel() {
+		return papel;
+	}
     
     
 		

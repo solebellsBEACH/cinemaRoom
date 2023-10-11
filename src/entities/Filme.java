@@ -20,9 +20,22 @@ public class Filme {
         this.duracao = duracao;
     }
     
+    public String getElenco() {
+        StringBuilder elencoStr = new StringBuilder("Elenco do Filme: " + titulo + "\n\n");
+        
+        for (Ator ator : atores) {
+            elencoStr.append("Nome: ").append(ator.getNome()).append(" / Papel: ").append(ator.getPapel()).append("\n");
+        }
+        System.out.println(elencoStr.toString());
+        return elencoStr.toString();
+    }
+        
     public void adicionarAtor(Ator ator) {
+    	
         atores.add(ator);
         ator.getFilmes().add(this);
+        
+        System.out.println("Ator: "+ator.getNome()+" acionado com sucesso!\n");
     }
 
     public void removerAtor(Ator ator) {
