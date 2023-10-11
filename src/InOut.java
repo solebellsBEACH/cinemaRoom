@@ -1,5 +1,7 @@
 import javax.swing.JOptionPane;
 
+import entities.Ator;
+
 /** 
  * A classe <tt>leDadosWin</tt> permite a leitura de dados de tipos nativos e de 
  * instancias da classe <tt>String</tt> a partir do teclado, atraves de uma 
@@ -295,7 +297,9 @@ public class InOut {
 	
 	
 	public static void main(String [] args){
-		System.out.print("teste");
+		Ator ator1 = new Ator("Lucas Xavier", "Surfista");
+		
+		System.out.println(ator1.getActorDescription());
 	}
 
     
