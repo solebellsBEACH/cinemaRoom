@@ -40,6 +40,16 @@ public class CinemaManager {
 	        return list;
 	}
 	
+	public String listSessoes() {
+		String list = "";
+			int i  = 0;
+			while(i<sessoes.size()) {
+				list = list +"\n"+i+"- "+sessoes.get(i).getHorario()+" - para o filme: "+sessoes.get(i).getFilme().getTitulo();
+				i++;
+			}
+	        return list;
+	}
+	
 	public void cadastrandoFilmes() {
 		Filme f1 = new Filme("Veloses e Furiosos", "Ação", 222);
 		Filme f2 = new Filme("De volta para o futuro", "Aventura", 1345);
@@ -90,5 +100,19 @@ public class CinemaManager {
 		salas.add(s4);
 		salas.add(s5);
 	}
+	
+	public void cadastrandoSessoes() {
+		Sessao s1 = new Sessao("09:00", filmes.get(0), salas.get(0));
+		Sessao s2 = new Sessao("12:00", filmes.get(1), salas.get(2));
+		Sessao s3 = new Sessao("13:00", filmes.get(2), salas.get(3));
+		Sessao s4 = new Sessao("14:30", filmes.get(3), salas.get(4));
+		Sessao s5 = new Sessao("21:00", filmes.get(4), salas.get(1));
+		sessoes.add(s1);
+		sessoes.add(s2);
+		sessoes.add(s3);
+		sessoes.add(s4);
+		sessoes.add(s5);
+	}
+	
 	
 }

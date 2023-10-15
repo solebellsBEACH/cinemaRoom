@@ -305,13 +305,14 @@ public class InOut {
 		manager.cadastrandoAtores();
 		manager.cadastrandoFilmes();
 		manager.cadastrandoSalas();
+		manager.cadastrandoSessoes();
 		
 		int numOpcoes = 4;
 
 		MsgDeAviso("Olá", "Bem vindo ao UVV Flix, clique em OK e selecione uma das opções a seguir!");
 		int opcao = 1000;
 		while(opcao != 0) {
-			opcao = leInt("0-Encerrar operação \n1-Listar os filmes disponíveis \n2-Listar Elenco de um determinado Filme \n3-Listar Atores  ");
+			opcao = leInt("0-Encerrar operação \n1-Listar os filmes disponíveis \n2-Listar Elenco de um determinado Filme \n3-Listar Atores \n4-Listar Sessoes  ");
 			System.out.println(opcao);
 				switch (opcao) {
 				case 0: break;
@@ -327,6 +328,10 @@ public class InOut {
 				}
 				case 3: {
 					MsgDeAviso("Lista de Atores", manager.listAtores());
+					break;
+				}
+				case 4: {
+					MsgDeAviso("Lista de Sessoes", manager.listSessoes());
 					break;
 				}
 				default:
