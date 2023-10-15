@@ -20,7 +20,14 @@ public class Filme {
         this.duracao = duracao;
     }
     
-    public String getElenco() {
+    
+    
+    public String getTitulo() {
+		return titulo;
+	}
+
+	public String getElenco() {
+    	if(atores.size() == 0)return "Sem elenco cadastrado para esse filme";
         StringBuilder elencoStr = new StringBuilder("Elenco do Filme: " + titulo + "\n\n");
         
         for (Ator ator : atores) {
