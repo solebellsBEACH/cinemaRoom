@@ -325,6 +325,10 @@ public class InOut {
 					MsgDeAviso("Elenco do filme: "+filme.getTitulo(), filme.getElenco());
 					break;
 				}
+				case 3: {
+					MsgDeAviso("Lista de Atores", manager.listAtores());
+					break;
+				}
 				default:
 					throw new IllegalArgumentException("O Valor " + opcao +" não é valido, digite um valor entre 0 e "+ numOpcoes);
 				}			

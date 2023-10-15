@@ -25,8 +25,19 @@ public class CinemaManager {
 	        return list;
 	}
 	
+	
 	public Filme getFilmeByIndex(int index) {		
 		return filmes.get(index);
+	}
+	
+	public String listAtores() {
+		String list = "";
+			int i  = 0;
+			while(i<atores.size()) {
+				list = list +"\n"+i+"- "+atores.get(i).getNome();
+				i++;
+			}
+	        return list;
 	}
 	
 	public void cadastrandoFilmes() {
