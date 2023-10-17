@@ -1,3 +1,4 @@
+package app;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +51,7 @@ public class CinemaManager {
 	        return list;
 	}
 	
-	public void cadastrandoFilmes() {
+	private void cadastrandoFilmes() {
 		Filme f1 = new Filme("Veloses e Furiosos", "Ação", 222);
 		Filme f2 = new Filme("De volta para o futuro", "Aventura", 1345);
 		Filme f3 = new Filme("As crônicas de Narnia", "Fantasia", 22332);
@@ -75,7 +76,7 @@ public class CinemaManager {
 		filmes.add(f4);
 		filmes.add(f5);
 	}
-	public void cadastrandoAtores() {
+	private void cadastrandoAtores() {
 		Ator a1 = new Ator("Wagner Moura", "Protagonista");
 		Ator a2 = new Ator("Brad Pitt","Protagonista");
 		Ator a3 = new Ator("Cadu Maverick", "Protagonista");
@@ -88,7 +89,7 @@ public class CinemaManager {
 		atores.add(a5);
 	}
 
-	public void cadastrandoSalas() {
+	private void cadastrandoSalas() {
 		Sala s1 = new Sala(100, "Ultra Wide", "UVV - Campus Boa Vista");
 		Sala s2 = new Sala(100, "Ultra Wide", "UVV - Campus Boa Vista");
 		Sala s3 = new Sala(100, "Ultra Wide", "UVV - Campus Boa Vista");
@@ -101,7 +102,7 @@ public class CinemaManager {
 		salas.add(s5);
 	}
 	
-	public void cadastrandoSessoes() {
+	private void cadastrandoSessoes() {
 		Sessao s1 = new Sessao("09:00", filmes.get(0), salas.get(0));
 		Sessao s2 = new Sessao("12:00", filmes.get(1), salas.get(2));
 		Sessao s3 = new Sessao("13:00", filmes.get(2), salas.get(3));
@@ -114,5 +115,13 @@ public class CinemaManager {
 		sessoes.add(s5);
 	}
 	
+	public void cadastrandoEntidades() {
+		this.cadastrandoAtores();
+		this.cadastrandoFilmes();
+		this.cadastrandoSalas();
+		this.cadastrandoSessoes();
+		
+		System.out.println("Entidades cadastradas com sucesso!!");
+	}
 	
 }

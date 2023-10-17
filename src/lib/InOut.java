@@ -1,3 +1,4 @@
+package lib;
 import java.util.function.Function;
 
 import javax.swing.JOptionPane;
@@ -301,44 +302,7 @@ public class InOut {
 	
 	public static void main(String [] args){
 		
-		CinemaManager manager = new CinemaManager();
-		manager.cadastrandoAtores();
-		manager.cadastrandoFilmes();
-		manager.cadastrandoSalas();
-		manager.cadastrandoSessoes();
 		
-		int numOpcoes = 4;
-
-		MsgDeAviso("Olá", "Bem vindo ao UVV Flix, clique em OK e selecione uma das opções a seguir!");
-		int opcao = 1000;
-		while(opcao != 0) {
-			opcao = leInt("0-Encerrar operação \n1-Listar os filmes disponíveis \n2-Listar Elenco de um determinado Filme \n3-Listar Atores \n4-Listar Sessoes  ");
-			System.out.println(opcao);
-				switch (opcao) {
-				case 0: break;
-				case 1: {
-					MsgDeAviso("Lista de Filmes", manager.listFilmes());
-					break;
-				}
-				case 2: {
-					int index = leInt("Insira o index do filme desejado");
-					Filme filme = manager.getFilmeByIndex(index);
-					MsgDeAviso("Elenco do filme: "+filme.getTitulo(), filme.getElenco());
-					break;
-				}
-				case 3: {
-					MsgDeAviso("Lista de Atores", manager.listAtores());
-					break;
-				}
-				case 4: {
-					MsgDeAviso("Lista de Sessoes", manager.listSessoes());
-					break;
-				}
-				default:
-					throw new IllegalArgumentException("O Valor " + opcao +" não é valido, digite um valor entre 0 e "+ numOpcoes);
-				}			
-		}
-		MsgDeAviso("Até mais ...", "Você digitou 0, até breve!");
 	}
 
     
