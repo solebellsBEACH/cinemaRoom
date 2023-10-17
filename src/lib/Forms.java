@@ -1,6 +1,7 @@
 package lib;
 
 import entities.Filme;
+import entities.Sessao;
 import app.CinemaManager;
 
 public class Forms {
@@ -55,6 +56,13 @@ public class Forms {
 		InOut.MsgDeAviso("Elenco do filme: "+filme.getTitulo(), filme.getElenco());
 	}
 	
+	private void setSessionStatus(boolean status, CinemaManager manager) {
+		int sessaoIndex = InOut.leInt("Insira o index da sessão");
+		Sessao sessao = manager.getSessaoByIndex(sessaoIndex);
+		sessao.setStatusSessao(status);
+		InOut.MsgDeAviso("---- Descrição da Sessão ----", sessao.getSessaoDescription());
+	}
+	
 	public void ADMINForm (CinemaManager manager) {
 
 		String password = InOut.leString("Por favor, digite sua senha de ADMINISTRADOR");
@@ -63,10 +71,10 @@ public class Forms {
 			InOut.MsgDeErro("Error ao Autenticar", "A senha informada está incorreta, tente novamente uma outra hora!!");
 		}else {
 			int opcao = 1000;
-			int numOpcoes = 5;
+			int numOpcoes = 7;
 			while(opcao != 0) {
 				opcao = InOut.leInt(
-						"0-Encerrar operação \n1-Listar os filmes disponíveis \n2-Listar Elenco de um determinado Filme \n3-Listar Atores \n4-Listar Sessoes \n-5-Adicionar o ator em um filme \n-6-Remover ator de um filme");
+						"0-Encerrar operação \n1-Listar os filmes disponíveis \n2-Listar Elenco de um determinado Filme \n3-Listar Atores \n4-Listar Sessoes \n5-Adicionar o ator em um filme \n6-Remover ator de um filme \n7-Iniciar sessão \n8-Parar sessão");
 					switch (opcao) {
 					case 0: break;
 					case 1: {
@@ -93,6 +101,14 @@ public class Forms {
 					}
 					case 6:{
 						this.removeAtorInFilme(manager);
+						break;
+					}
+					case 7:{
+						this.setSessionStatus(true, manager);
+						break;
+					}
+					case 8:{
+						this.setSessionStatus(false, manager);
 						break;
 					}
 					default:

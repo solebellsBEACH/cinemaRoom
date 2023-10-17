@@ -45,6 +45,11 @@ public class Sessao {
 	public void setSala(Sala sala) {
 		this.sala = sala;
 	}
+	
+	public String getSessaoDescription() {
+		String status = this.statusSessao ? "Iniciada":"Não iniciada";
+		return "\nHorario: "+this.horario+"\nFilme: "+this.filme.getTitulo() +"\nStatus da Sessão: "+status;
+	}
 		
 		
 }

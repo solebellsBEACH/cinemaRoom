@@ -45,11 +45,15 @@ public class CinemaManager {
 		return atores.get(index);
 	}
 	
+	public Sessao getSessaoByIndex(int index) {		
+		return sessoes.get(index);
+	}
+		
 	public String listSessoes() {
 		String list = "";
 			int i  = 0;
 			while(i<sessoes.size()) {
-				list = list +"\n"+i+"- "+sessoes.get(i).getHorario()+" - para o filme: "+sessoes.get(i).getFilme().getTitulo();
+				list = list +"\n"+i+"- "+sessoes.get(i).getSessaoDescription();
 				i++;
 			}
 	        return list;
