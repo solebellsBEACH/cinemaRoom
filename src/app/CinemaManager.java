@@ -41,6 +41,10 @@ public class CinemaManager {
 	        return list;
 	}
 	
+	public Ator getAtorByIndex(int index) {		
+		return atores.get(index);
+	}
+	
 	public String listSessoes() {
 		String list = "";
 			int i  = 0;
