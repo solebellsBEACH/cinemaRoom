@@ -47,6 +47,13 @@ public class Forms {
 		filme.adicionarAtor(manager.getAtorByIndex(indexAtor));
 		InOut.MsgDeAviso("Elenco do filme: "+filme.getTitulo(), filme.getElenco());
 	}
+	private void removeAtorInFilme(CinemaManager manager) {
+		int indexAtor = InOut.leInt("Insira o index do ator desejado");
+		int indexFilme = InOut.leInt("Insira o index do filme desejado");
+		Filme filme = manager.getFilmeByIndex(indexFilme);
+		filme.removerAtor(manager.getAtorByIndex(indexAtor));
+		InOut.MsgDeAviso("Elenco do filme: "+filme.getTitulo(), filme.getElenco());
+	}
 	
 	public void ADMINForm (CinemaManager manager) {
 
@@ -59,7 +66,7 @@ public class Forms {
 			int numOpcoes = 5;
 			while(opcao != 0) {
 				opcao = InOut.leInt(
-						"0-Encerrar operação \n1-Listar os filmes disponíveis \n2-Listar Elenco de um determinado Filme \n3-Listar Atores \n4-Listar Sessoes \n-5-Adicionar o ator em um filme");
+						"0-Encerrar operação \n1-Listar os filmes disponíveis \n2-Listar Elenco de um determinado Filme \n3-Listar Atores \n4-Listar Sessoes \n-5-Adicionar o ator em um filme \n-6-Remover ator de um filme");
 					switch (opcao) {
 					case 0: break;
 					case 1: {
@@ -82,6 +89,11 @@ public class Forms {
 					}
 					case 5:{
 						this.addAtorInFilme(manager);
+						break;
+					}
+					case 6:{
+						this.removeAtorInFilme(manager);
+						break;
 					}
 					default:
 						throw new IllegalArgumentException("O Valor " + opcao +" não é valido, digite um valor entre 0 e "+ numOpcoes);
