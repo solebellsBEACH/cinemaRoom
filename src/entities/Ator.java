@@ -1,13 +1,13 @@
 package entities;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 public class Ator {
 	
 	Integer idAtor;
 	String nome, papel;
-	private Set<Filme> filmes = new HashSet<>();
+	private List<Filme> filmes = new ArrayList<>();
 	Random random = new Random();
 	
     public Ator(String nome, String papel) {
@@ -30,11 +30,11 @@ public class Ator {
     	   return "Descrição do Ator => \nNome: "+this.nome+"\nPapel: "+this.papel;
     }
 
-	public Set<Filme> getFilmes() {
+	public List<Filme> getFilmes() {
 		return filmes;
 	}
 
-	public void setFilmes(Set<Filme> filmes) {
+	public void setFilmes(List<Filme> filmes) {
 		this.filmes = filmes;
 	}
 

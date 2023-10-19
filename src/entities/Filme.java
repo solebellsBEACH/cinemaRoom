@@ -1,15 +1,15 @@
 package entities;
 
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 public class Filme {
 	
 	Integer idFilme;
 	String titulo, genero;
 	long duracao;
-	private Set<Ator> atores = new HashSet<>();
+	private List<Ator> atores = new ArrayList<>();
 	
 	Random random = new Random();
 	
@@ -50,11 +50,11 @@ public class Filme {
         ator.getFilmes().remove(this);
     }
 
-	public Set<Ator> getAtores() {
+	public List<Ator> getAtores() {
 		return atores;
 	}
 
-	public void setAtores(Set<Ator> atores) {
+	public void setAtores(List<Ator> atores) {
 		this.atores = atores;
 	}
     

@@ -1,10 +1,5 @@
 package lib;
-import java.util.function.Function;
-
 import javax.swing.JOptionPane;
-
-import entities.Ator;
-import entities.Filme;
 
 /** 
  * A classe <tt>leDadosWin</tt> permite a leitura de dados de tipos nativos e de 
